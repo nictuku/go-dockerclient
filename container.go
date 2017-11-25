@@ -46,6 +46,7 @@ type APIPort struct {
 
 // APIMount represents a mount point for a container.
 type APIMount struct {
+	Type        string `json:"Type,omitempty" yaml:"Type,omitempty" toml:"Type,omitempty"`
 	Name        string `json:"Name,omitempty" yaml:"Name,omitempty" toml:"Name,omitempty"`
 	Source      string `json:"Source,omitempty" yaml:"Source,omitempty" toml:"Source,omitempty"`
 	Target      string `json:"Target,omitempty" yaml:"Target,omitempty" toml:"Target,omitempty"`
