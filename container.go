@@ -48,7 +48,7 @@ type APIPort struct {
 type APIMount struct {
 	Name        string `json:"Name,omitempty" yaml:"Name,omitempty" toml:"Name,omitempty"`
 	Source      string `json:"Source,omitempty" yaml:"Source,omitempty" toml:"Source,omitempty"`
-	Destination string `json:"Destination,omitempty" yaml:"Destination,omitempty" toml:"Destination,omitempty"`
+	Target      string `json:"Target,omitempty" yaml:"Target,omitempty" toml:"Target,omitempty"`
 	Driver      string `json:"Driver,omitempty" yaml:"Driver,omitempty" toml:"Driver,omitempty"`
 	Mode        string `json:"Mode,omitempty" yaml:"Mode,omitempty" toml:"Mode,omitempty"`
 	RW          bool   `json:"RW,omitempty" yaml:"RW,omitempty" toml:"RW,omitempty"`
@@ -371,12 +371,12 @@ type VolumeDriverConfig struct {
 // It has been added in the version 1.20 of the Docker API, available since
 // Docker 1.8.
 type Mount struct {
-	Name        string
-	Source      string
-	Destination string
-	Driver      string
-	Mode        string
-	RW          bool
+	Name   string
+	Source string
+	Target string
+	Driver string
+	Mode   string
+	RW     bool
 }
 
 // LogConfig defines the log driver type and the configuration for it.
